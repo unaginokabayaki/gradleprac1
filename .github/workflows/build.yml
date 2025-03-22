@@ -1,13 +1,17 @@
 name: build
 
 on:
-  - push
+  push:
+    - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: test
+        run: echo "Hello, World!"
+
       - uses: actions/checkout@v4
 
       - uses: gradle/wrapper-validation-action@v1
