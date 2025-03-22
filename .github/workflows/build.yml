@@ -1,4 +1,4 @@
-name: build
+name: build gradle project for main
 
 on:
   push:
@@ -13,7 +13,16 @@ jobs:
       - name: test
         run: echo "Hello, World!"
 
+      - name: version
+        run: java -version
+
+      - name: show files
+        run: ls -la
+
       - uses: actions/checkout@v4
+
+      - name: show files
+        run: ls -la
 
       - uses: gradle/wrapper-validation-action@v1
 
