@@ -24,7 +24,7 @@ jobs:
       - name: show files
         run: ls -la
 
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/actions/wrapper-validation@v3
 
       - name: Set up Java 17
         uses: actions/setup-java@v3
